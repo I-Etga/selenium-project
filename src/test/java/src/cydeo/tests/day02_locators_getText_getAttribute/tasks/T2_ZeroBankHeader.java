@@ -1,7 +1,9 @@
 package src.cydeo.tests.day02_locators_getText_getAttribute.tasks;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class T2_ZeroBankHeader {
@@ -15,13 +17,13 @@ public class T2_ZeroBankHeader {
 
         //2. Go to http://zero.webappsecurity.com/login.html
         driver.get("http://zero.webappsecurity.com/login.html");
-
+        WebElement headerText = driver.findElement(By.tagName("h3"));
 
         //3. Verify header text
         //Expected: “Log in to ZeroBank”
 
         String expectedTitle = "Log in to ZeroBank";
-        String actualTitle = driver.getTitle(); // Zero - Log in
+        String actualTitle = headerText.getText(); // Zero - Log in
 
         if (expectedTitle.equals(actualTitle)) {
             System.out.println("Title verification PASSED!");
