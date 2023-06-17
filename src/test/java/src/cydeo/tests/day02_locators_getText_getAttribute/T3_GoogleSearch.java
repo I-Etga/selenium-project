@@ -23,11 +23,16 @@ public class T3_GoogleSearch {
 
         //Accepts all cookies. This is the privacy policy thing in Europe]--> Otherwise, we can't keep testing
         driver.findElement(By.id("W0wltc")).click();
+        //driver.findElement(By.xpath("//button[@id='W0wltc']"));
 
         // 3- Write “apple” in search box
         //a. locate search box
         WebElement googleSearchBox = driver.findElement(By.name("q"));
         // I'm looking for the name of the web element
+
+        WebElement googleLogo = driver.findElement(By.className("lnXdpd"));
+        //WebElement googleLogo = driver.findElement(By.xpath("//img[@class='lnXdpd']");
+        // driver.findElement(By.cssSelector("img[class='lnXdpd']"));
 
         //b. enter "apple" key, and press ENTER
         googleSearchBox.sendKeys("apple" + Keys.ENTER);
