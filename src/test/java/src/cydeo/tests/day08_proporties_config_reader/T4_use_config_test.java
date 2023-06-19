@@ -19,7 +19,9 @@ public class T4_use_config_test {
     @BeforeMethod
     public void setupMethod() {
         //1. Create new test and make setups
-        driver = WebDriverFactory.getDriver(ConfigurationReader.getProperty("browser"));
+        String browserType = ConfigurationReader.getProperty("browser");
+
+        driver = WebDriverFactory.getDriver(browserType);
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
