@@ -6,7 +6,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import src.cydeo.tests.base.TestBase;
-import src.cydeo.utilities.ConfigurationReader;
 import src.cydeo.utilities.Driver;
 
 public class T3_actions_hover extends TestBase {
@@ -15,7 +14,7 @@ public class T3_actions_hover extends TestBase {
         //TC #3: Hover Test
 
         //1. Go to https://practice.cydeo.com/hovers
-        Driver.getDriver().get(ConfigurationReader.getProperty("practiceHoverURL"));
+        Driver.getDriver().get("https://practice.cydeo.com/hovers");
 
         //create Actions object
 

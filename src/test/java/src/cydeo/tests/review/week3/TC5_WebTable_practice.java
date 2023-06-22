@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import src.cydeo.tests.base.TestBase;
-import src.cydeo.utilities.ConfigurationReader;
 import src.cydeo.utilities.Driver;
 
 import java.util.List;
@@ -17,8 +16,8 @@ public class TC5_WebTable_practice extends TestBase{
     public void webTables_test1() {
 
         // 2. Go to https://practice.cydeo.com/tables
-        String URL = ConfigurationReader.getProperty("practiceWebTablesURL");
-        Driver.getDriver().get(URL);
+        //String URL = ConfigurationReader.getProperty("practiceWebTablesURL");
+        Driver.getDriver().get("https://practice.cydeo.com/tables");
 
         // 3. Print table data as a single String, not so common, but useful sometimes
 

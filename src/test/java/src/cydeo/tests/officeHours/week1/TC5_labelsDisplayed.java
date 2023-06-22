@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import src.cydeo.tests.base.TestBase;
-import src.cydeo.utilities.ConfigurationReader;
 import src.cydeo.utilities.Driver;
 
 import java.util.List;
@@ -21,8 +20,7 @@ public class TC5_labelsDisplayed extends TestBase {
         // and LOGIN labels are displayed
 
         // 2- Go to "https://vytrack.com"
-        String URL = ConfigurationReader.getProperty("vyTrackURL");
-        Driver.getDriver().get(URL);
+        Driver.getDriver().get("https://vytrack.com/");
 
         //  3-verify Home, About us, Our Approach,
         //  Products and Services, Contact and LOGIN labels are displayed

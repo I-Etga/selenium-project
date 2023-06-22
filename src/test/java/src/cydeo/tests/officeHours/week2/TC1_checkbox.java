@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import src.cydeo.tests.base.TestBase;
-import src.cydeo.utilities.ConfigurationReader;
 import src.cydeo.utilities.Driver;
 
 public class TC1_checkbox extends TestBase {
@@ -15,7 +14,7 @@ public class TC1_checkbox extends TestBase {
         //**  TC001 As a user I should be able to click checkboxes
 
         //  2-goto https://practice.cydeo.com/
-        Driver.getDriver().get(ConfigurationReader.getProperty("practiceURL1"));
+        Driver.getDriver().get("https://practice.cydeo.com/");
 
         //  3-click Checkboxes
         //WebElement checkboxesLink =Driver.getDriver().findElement(By.xpath("//a[.='Checkboxes']"));

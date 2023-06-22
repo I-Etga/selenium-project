@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import src.cydeo.tests.base.TestBase;
-import src.cydeo.utilities.ConfigurationReader;
 import src.cydeo.utilities.Driver;
 
 public class TC1_JavaFaker_Practice extends TestBase {
@@ -17,8 +16,7 @@ public class TC1_JavaFaker_Practice extends TestBase {
     public void test1_javaFaker() {
 
         // 2. Go to https://practice.cydeo.com/login
-        String URL = ConfigurationReader.getProperty("practiceURL");
-        Driver.getDriver().get(URL);
+        Driver.getDriver().get("https://practice.cydeo.com/login");
 
         //create Faker object
         Faker faker = new Faker();

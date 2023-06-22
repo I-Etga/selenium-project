@@ -4,7 +4,6 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 import src.cydeo.tests.base.TestBase;
 import src.cydeo.utilities.BrowserUtils;
-import src.cydeo.utilities.ConfigurationReader;
 import src.cydeo.utilities.Driver;
 
 public class T6_JavaScriptExecutor_Practice extends TestBase {
@@ -16,7 +15,7 @@ public class T6_JavaScriptExecutor_Practice extends TestBase {
 
 
         //2- Go to: https://practice.cydeo.com/infinite_scroll
-        Driver.getDriver().get(ConfigurationReader.getProperty("practiceInfiniteScrollURL"));
+        Driver.getDriver().get("https://practice.cydeo.com/infinite_scroll");
 
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
 

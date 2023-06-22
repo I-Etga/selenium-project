@@ -7,7 +7,6 @@ import org.openqa.selenium.interactions.Actions;
 import org.testng.annotations.Test;
 import src.cydeo.tests.base.TestBase;
 import src.cydeo.utilities.BrowserUtils;
-import src.cydeo.utilities.ConfigurationReader;
 import src.cydeo.utilities.Driver;
 
 public class T4_T5_scrolling_practice extends TestBase {
@@ -17,7 +16,7 @@ public class T4_T5_scrolling_practice extends TestBase {
         //TC #4: Scroll practice
 
         //2- Go to: https://practice.cydeo.com/
-        Driver.getDriver().get(ConfigurationReader.getProperty("practiceURL1"));
+        Driver.getDriver().get("https://practice.cydeo.com/");
         //locate driver
         WebElement cydeoLink = Driver.getDriver().findElement(By.linkText("CYDEO"));
 

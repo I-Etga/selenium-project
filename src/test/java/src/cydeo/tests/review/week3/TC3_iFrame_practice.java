@@ -6,7 +6,6 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import src.cydeo.tests.base.TestBase;
-import src.cydeo.utilities.ConfigurationReader;
 import src.cydeo.utilities.Driver;
 
 public class TC3_iFrame_practice extends TestBase {
@@ -17,8 +16,7 @@ public class TC3_iFrame_practice extends TestBase {
     public void setupMethod() {
 
         //2. Go to: https://login1.nextbasecrm.com/
-        String URL = ConfigurationReader.getProperty("crmURL");
-        Driver.getDriver().get(URL);
+        Driver.getDriver().get("https://login1.nextbasecrm.com/");
 
         //// 1. Users are already login and on the homepage of CRM app
 

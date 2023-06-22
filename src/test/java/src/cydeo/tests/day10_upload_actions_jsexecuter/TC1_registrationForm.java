@@ -7,7 +7,6 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import src.cydeo.tests.base.TestBase;
-import src.cydeo.utilities.ConfigurationReader;
 import src.cydeo.utilities.Driver;
 
 public class TC1_registrationForm extends TestBase {
@@ -17,8 +16,7 @@ public class TC1_registrationForm extends TestBase {
     public void registrationFrom_test1() {
 
         //2. Go to website: https://practice.cydeo.com/registration_form
-        String URL = ConfigurationReader.getProperty("practiceRegistrationFromURL");
-        Driver.getDriver().get(URL);
+        Driver.getDriver().get("https://practice.cydeo.com/registration_form");
 
         //create Faker obj
         Faker faker = new Faker();

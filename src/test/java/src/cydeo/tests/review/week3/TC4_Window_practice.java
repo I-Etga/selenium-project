@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.testng.annotations.Test;
 import src.cydeo.tests.base.TestBase;
-import src.cydeo.utilities.ConfigurationReader;
 import src.cydeo.utilities.Driver;
 
 public class TC4_Window_practice extends TestBase {
@@ -14,8 +13,7 @@ public class TC4_Window_practice extends TestBase {
     @Test
     public void window_practice_test1() {
         //    2. Go to website: https://demoqa.com/browser-windows
-        String URL = ConfigurationReader.getProperty("toolQAURL");
-        Driver.getDriver().get(URL);
+        Driver.getDriver().get("https://demoqa.com/browser-windows");
 
         //    3. Click on New Tab button
 

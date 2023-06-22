@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import src.cydeo.tests.base.TestBase;
-import src.cydeo.utilities.ConfigurationReader;
 import src.cydeo.utilities.Driver;
 
 public class TC2_Alert_practice extends TestBase {
@@ -16,8 +15,7 @@ public class TC2_Alert_practice extends TestBase {
     @Test
     public void test1_JSAlert() {
         // 2. Go to website: https://practice.cydeo.com/javascript_alerts
-        String URL = ConfigurationReader.getProperty("practiceJSAlertsURL");
-        Driver.getDriver().get(URL);
+        Driver.getDriver().get("https://practice.cydeo.com/javascript_alerts");
 
         // 3. Click to “Click for JS Prompt” button
         WebElement clickJSPrompt = Driver.getDriver().findElement(By.xpath("//button[.='Click for JS Prompt']"));

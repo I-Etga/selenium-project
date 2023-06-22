@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import src.cydeo.tests.base.TestBase;
-import src.cydeo.utilities.ConfigurationReader;
 import src.cydeo.utilities.Driver;
 
 import java.io.File;
@@ -17,7 +16,7 @@ public class T2_Upload_Practice extends TestBase {
         //TC #2 Upload Test
 
         //1. Go to https://practice.cydeo.com/upload
-        Driver.getDriver().get(ConfigurationReader.getProperty("practiceUploadURL"));
+        Driver.getDriver().get("https://practice.cydeo.com/upload");
 
         //2. Find some small file from your computer, and get the path of it.
 

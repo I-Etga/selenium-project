@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import src.cydeo.tests.base.TestBase;
-import src.cydeo.utilities.ConfigurationReader;
 import src.cydeo.utilities.Driver;
 
 public class TC1_isDisplayed extends TestBase {
@@ -15,8 +14,7 @@ public class TC1_isDisplayed extends TestBase {
         // **  TC001 As a user I should be able to see Login label is displayed
 
         //  2-goto https://vytrack.com/
-        String URL = ConfigurationReader.getProperty("vyTrackURL");
-        Driver.getDriver().get(URL);
+        Driver.getDriver().get("https://vytrack.com/");
 
         //  3-verify Login is displayed
         WebElement loginLink = Driver.getDriver().findElement(By.xpath("//a[@href='http://app.vytrack.com']"));

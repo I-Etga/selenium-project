@@ -6,7 +6,6 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import src.cydeo.tests.base.TestBase;
-import src.cydeo.utilities.ConfigurationReader;
 import src.cydeo.utilities.Driver;
 
 public class TC3_login extends TestBase {
@@ -17,7 +16,7 @@ public class TC3_login extends TestBase {
     public void loginTest(){
 
         // 2- Go to "https://seamlessly.net/"
-        Driver.getDriver().get(ConfigurationReader.getProperty("seamlesslyURL"));
+        Driver.getDriver().get("https://seamlessly.net/");
 
         // 3- Click Login label
         WebElement loginLabel = Driver.getDriver().findElement(By.linkText("Login"));

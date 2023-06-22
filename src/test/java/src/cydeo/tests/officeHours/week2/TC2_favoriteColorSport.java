@@ -17,7 +17,7 @@ public class TC2_favoriteColorSport extends TestBase {
 
 
         //  2-goto https://practice.cydeo.com/
-        Driver.getDriver().get(ConfigurationReader.getProperty("practiceURL1"));
+        Driver.getDriver().get(ConfigurationReader.getProperty("practiceURL"));
 
         //  3-click Radio Buttons
         WebElement radioButtonLink = Driver.getDriver().findElement(By.linkText("Radio Buttons"));

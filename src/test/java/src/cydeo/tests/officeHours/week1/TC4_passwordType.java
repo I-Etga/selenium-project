@@ -5,7 +5,6 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 import src.cydeo.tests.base.TestBase;
-import src.cydeo.utilities.ConfigurationReader;
 import src.cydeo.utilities.Driver;
 
 public class TC4_passwordType extends TestBase {
@@ -14,8 +13,7 @@ public class TC4_passwordType extends TestBase {
     @Test
     public void test_typePassword(){
         // 2- Go to "https://vytrack.com"
-        String URL = ConfigurationReader.getProperty("vyTrackURL");
-        Driver.getDriver().get(URL);
+        Driver.getDriver().get("https://vytrack.com/");
 
         // 3- Click Login label
         WebElement loginButton = Driver.getDriver().findElement(By.xpath("//li[@id='menu-item-849']"));
